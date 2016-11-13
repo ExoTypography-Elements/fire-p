@@ -1,0 +1,16 @@
+$slide-from-right-bottom-offset: $default-offset/2;
+
+@keyframes slide-from-right-bottom {
+
+  0% {
+    transform: translate($slide-from-right-bottom-offset, $slide-from-right-bottom-offset);
+  }
+
+  100% {
+    transform: none;
+  }
+}
+
+.slide-from-right-bottom {
+  animation-name: slide-from-right-bottom;
+}

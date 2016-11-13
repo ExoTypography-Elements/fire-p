@@ -1,0 +1,16 @@
+$slide-from-left-offset: $default-offset;
+
+@keyframes slide-from-left {
+
+  0% {
+    transform: translateX(-$slide-from-left-offset);
+  }
+
+  100% {
+    transform: none;
+  }
+}
+
+.slide-from-left {
+  animation-name: slide-from-left;
+}

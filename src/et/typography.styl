@@ -1,0 +1,751 @@
+
+
+//  Base styles: opinionated defaults
+
+html {
+  color: text-color;
+  }
+
+// Remove text-shadow in selection highlight:
+// https://twitter.com/miketaylr/status/12228805301
+// These selection rule sets have to be separate.
+// Customize the background color to match your design.
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none; }
+
+
+// A better looking default horizontal rule
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0; }
+
+// Remove the gap between audio, canvas, iframes,
+// images, videos and the bottom of their containers:
+// https://github.com/h5bp/html5-boilerplate/issues/440
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle; }
+
+// Remove default fieldset styles.
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0; }
+
+// Allow only vertical resizing of textareas.
+ 
+textarea {
+  resize: vertical; }
+
+// Browser Upgrade Prompt
+
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0; }
+
+// Author's custom styles
+// Helper classes
+// Hide visually and from screen readers:
+ 
+.hidden {
+  display: none !important; }
+
+// Hide only visually, but have it available for screen readers:
+// http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ 
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto; }
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+.invisible {
+  visibility: hidden; }
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */ }
+
+.clearfix:after {
+  clear: both; }
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */ }
+@media print, (min-resolution: 1.25dppx), (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */ }
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+@media print {
+  *,
+  *:before,
+  *:after,
+  *:first-letter,
+  *:first-line {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster: http://www.sanbeiji.com/archives/953 */
+    box-shadow: none !important;
+    text-shadow: none !important; }
+
+  a,
+  a:visited {
+    text-decoration: underline; }
+
+  a[href]:after {
+    content: " (" attr(href) ")"; }
+
+  abbr[title]:after {
+    content: " (" attr(title) ")"; }
+
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: ""; }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid; }
+
+  /*
+   * Printing Tables:
+   * http://css-discuss.incutio.com/wiki/Printing_Tables
+   */
+  thead {
+    display: table-header-group; }
+
+  tr,
+  img {
+    page-break-inside: avoid; }
+
+  img {
+    max-width: 100% !important; }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3; }
+
+  h2,
+  h3 {
+    page-break-after: avoid; } }
+
+/* Remove the unwanted box around FAB buttons */
+/* More info: http://goo.gl/IPwKi */
+a, .et-accordion, .et-button, .et-card, .et-checkbox, .et-dropdown-menu,
+.et-icon-toggle, .et-item, .et-radio, .et-slider, .et-switch, .et-tabs__tab {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0); }
+
+/*
+ * Make html take up the entire screen
+ * Then set touch-action to avoid touch delay on mobile IE
+ */
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation; 
+
+  }
+
+/*
+* Make body take up the entire screen
+* Remove body margin so layout containers don't cause extra overflow.
+*/
+body {
+  position:relative;
+  width: 100%;
+  min-height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    padding: 0; 
+    word-wrap: break-word;
+   -webkit-text-size-adjust:100%;
+   text-rendering: optimizeLegibility;
+  -webkit-backface-visibility: hidden;
+  -webkit-user-drag: none; 
+    }
+
+/*
+ * Main display reset for IE support.
+ * Source: http://weblog.west-wind.com/posts/2015/Jan/12/main-HTML5-Tag-not-working-in-Internet-Explorer-91011
+ */
+main {
+  display: block; }
+
+/*
+* Apply no display to elements with the hidden attribute.
+* IE 9 and 10 support.
+*/
+*[hidden] {
+  display: none !important; }
+
+html, body {
+  background: background-color;
+  font-family:  font-family;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: .05em; }
+
+body{
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0; }
+
+.et-display-4 {
+  font-family: font-family;
+  font-size: 112px;
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -0.04em; 
+  text-rendering: optimizeLegibility;
+  }
+
+.et-display-3 {
+  font-family: font-family;
+  font-size: 56px;
+  font-weight: 300;
+  line-height: 1.35;
+  letter-spacing: -0.02em; }
+
+.et-display-2 {
+  font-family: font-family;
+  font-size: 45px;
+  font-weight: 400;
+  line-height: 48px; }
+
+.et-display-1 {
+  font-family: font-family;
+  font-size: 34px;
+  font-weight: 400;
+  line-height: 40px; }
+
+.et-headline {
+  font-family: font-family;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+  -moz-osx-font-smoothing: grayscale; 
+  }
+
+.et-title {
+  font-family: font-family;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0.02em; 
+  }
+
+.et-subhead {
+  font-family: font-family;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.04em; }
+
+/**
+* Styles for HTML elements
+*/
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+  font-family: font-family;
+  font-size: 56px;
+  font-weight: 300;
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+  opacity: 0.54;
+  font-size: 0.6em; 
+  text-rendering: optimizeLegibility;}
+
+h1 {
+  @extend  .et-display-3
+  //margin-top: 24px;
+  margin-bottom: 24px; 
+  text-rendering: optimizeLegibility;}
+
+h2 {
+  @extend .et-display-2
+ // margin-top: 24px;
+  margin-bottom: 24px; }
+
+h3 {
+  @extend .et-display-1
+ // margin-top: 24px;
+  margin-bottom: 24px; }
+
+h4 {
+  @extend .et-headline
+  -moz-osx-font-smoothing: grayscale;
+  // margin-top: 24px;
+  margin-bottom: 16px; }
+
+h5 {
+  @extend .et-title
+//  margin-top: 24px;
+  margin-bottom: 16px; }
+
+h6 {
+  @extend .et-subhead
+  font-weight: 500;
+//  margin-top: 24px;
+  margin-bottom: 16px; }
+
+
+p {
+  
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: .02em;
+  margin-bottom: 16px; }
+
+a {
+  color: $color-accent;
+  font-weight: 500; }
+
+blockquote {
+  font-family: font-family;
+  position: relative;
+  font-size: 24px;
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.35;
+  letter-spacing: 0.08em; }
+  blockquote:before {
+    position: absolute;
+    left: -0.5em;
+    content: '“'; }
+  blockquote:after {
+    content: '”';
+    margin-left: -0.05em; }
+
+mark {
+  background-color: #f4ff81; }
+
+dt {
+  font-weight: 700; }
+
+address {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0;
+  font-style: normal; }
+
+ul, ol {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0; }
+
+/**
+ * Class Name Styles
+ */
+
+
+.et-display-4-color-contrast {
+  font-family: font-family;
+  font-size: 112px;
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  opacity: 0.54; }
+
+
+
+.et-display-3-color-contrast {
+  font-family: font-family;
+  font-size: 56px;
+  font-weight: 400;
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+  opacity: 0.54; }
+
+
+
+.et-display-2-color-contrast {
+  font-family: font-family;
+  font-size: 45px;
+  font-weight: 400;
+  line-height: 48px;
+  opacity: 0.54; }
+
+
+
+.et-display-1-color-contrast {
+  font-family: font-family;
+  font-size: 34px;
+  font-weight: 400;
+  line-height: 40px;
+  opacity: 0.54; }
+
+
+
+.et-headline-color-contrast {
+  font-family: font-family;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+  -moz-osx-font-smoothing: grayscale;
+  opacity: 0.54; }
+
+
+
+.et-title-color-contrast {
+  font-family: font-family;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  opacity: 0.54; }
+
+
+.et-subhead-color-contrast {
+  font-family: font-family;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+  opacity: 0.54; }
+
+.et-body-2 {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 24px;
+  letter-spacing: 0; }
+
+.et-body-2-color-contrast {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 24px;
+  letter-spacing: 0;
+  opacity: 0.87; }
+
+.et-body-1 {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0; }
+
+.et-body-1-color-contrast {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0;
+  opacity: 0.87; }
+
+.et-body-2-force-font {
+  font-family: font-family;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0; }
+
+.et-body-2-force-font-color-contrast {
+  font-family: font-family;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0;
+  opacity: 0.87; }
+
+.et-body-1-force-font {
+  font-family: font-family;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0; }
+
+.et-body-1-force-font-color-contrast {
+  font-family: font-family;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0;
+  opacity: 0.87; }
+
+.et-caption {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0; }
+
+.et-caption-force-font {
+  font-family: font-family;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0; }
+
+.et-caption-color-contrast {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0;
+  opacity: 0.54; }
+
+.et-caption-force-font-color-contrast {
+  font-family: font-family;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0;
+  opacity: 0.54; }
+
+.et-menu {
+  font-family: font-family;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0; }
+
+.et-menu-color-contrast {
+  font-family: font-family;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0;
+  opacity: 0.87; }
+
+.et-button-text {
+  font-family: font-family;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  line-height: 1;
+  letter-spacing: 0; }
+
+.et-button-text-color-contrast {
+  font-family: font-family;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  line-height: 1;
+  letter-spacing: 0;
+  opacity: 0.87; }
+
+.et-text-left {
+  text-align: left; }
+
+.et-text-right {
+  text-align: right; }
+
+.et-text-center {
+  text-align: center; }
+
+.et-text-justify {
+  text-align: justify; }
+
+.et-text-nowrap {
+  white-space: nowrap; }
+
+.et-text-lowercase {
+  text-transform: lowercase; }
+
+.et-text-uppercase {
+  text-transform: uppercase; }
+
+.et-text-caps {
+  text-transform: capitalize; }
+
+.et-font-thin {
+  font-weight: 200 !important; }
+
+.et-font-light {
+  font-weight: 300 !important; }
+
+.et-font-regular {
+  font-weight: 400 !important; }
+
+.et-font-medium {
+  font-weight: 500 !important; }
+
+.et-font-bold {
+  font-weight: 700 !important; }
+
+.et-font-black {
+  font-weight: 900 !important; }
+
+.et-perfect {max-width: 27em;}
+
+.et-perfect-2x {max-width: 54em;}
+
+.et-leading-1 {line-height: 1.5rem; }
+
+.et-leading-2 {line-height: 2rem; }
+
+.et-leading-3 {line-height: 3rem; }
+
+.et-leading-4 {line-height: 4rem; }
+// Text Highlight
+
+.et-white-text {
+  color:   white-text;
+}
+
+.et-text-highlight{
+  padding:8px;
+  margin-right:3px; 
+}
+
+.et-text-shadow {
+    text-shadow: 1px 1px 3px rgba(0,0,0,.8);
+}
+
+.et-text-shadow2{
+    text-shadow: rgba(0, 0, 0, 0.24) 1.0px 1.0px 0px;
+}
+
+//text wrapper
+@media only screen and (min-width: 400px) {
+    .et-text-wrapper-2 {
+     -webkit-column-count: 1; /* Chrome, Safari, Opera */
+    -moz-column-count: 1; /* Firefox */
+    column-count: 1;
+    } }
+@media only screen and (min-width: 600px) {
+    .et-text-wrapper-2 {
+     -webkit-column-count: 2; /* Chrome, Safari, Opera */
+    -moz-column-count: 2; /* Firefox */
+    column-count: 2;
+    } }
+@media only screen and (min-width: 400px) {
+    .et-text-wrapper-3 {
+     -webkit-column-count: 1; /* Chrome, Safari, Opera */
+    -moz-column-count: 1; /* Firefox */
+    column-count: 1;
+    } }
+@media only screen and (min-width: 600px) {
+    .et-text-wrapper-3 {
+     -webkit-column-count: 3; /* Chrome, Safari, Opera */
+    -moz-column-count: 3; /* Firefox */
+    column-count: 3;
+    } }
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  word-wrap: normal;
+  font-feature-settings: 'liga';
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+
+input, textarea {
+  -webkit-user-select: auto;
+}
+ul, ol, dl {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+ul ul, ul ol, ul dl, ol ul, ol ol, ol dl, dl ul, dl ol, dl dl {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul {
+  margin-left: 1.5rem;
+  padding: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+ol {
+  padding-left: 1.5rem;
+}
+
+@media (min-width: 30em) {
+    .row { width: 100%; display: table; table-layout: fixed; }
+    .col { display: table-cell; }
+}
+@media (max-width: 479px) {                                                     
+    .col {                                                                      
+        width: 100% !important;                                                 
+    }                                                                           
+}   
+#example:before {
+   content: "[";
+}
+
+#example:after {
+   content: "]";
+}       

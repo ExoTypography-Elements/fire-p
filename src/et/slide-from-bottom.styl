@@ -1,0 +1,16 @@
+$slide-from-bottom-offset: $default-offset;
+
+@keyframes slide-from-bottom {
+
+  0% {
+    transform: translateY($slide-from-bottom-offset);
+  }
+
+  100% {
+    transform: none;
+  }
+}
+
+.slide-from-bottom {
+  animation-name: slide-from-bottom;
+}

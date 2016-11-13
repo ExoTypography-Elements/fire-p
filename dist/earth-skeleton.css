@@ -1,0 +1,1 @@
+#awrap{max-width:740px;margin-left:auto;margin-right:auto}.intro-header{display:flex;align-items:center;min-height:100vh;justify-content:center;width:100%;height:100%;margin:0;margin:auto;background:#a6e7ff}@element '.intro-header'and(min-width:960px){.intro-header{background:#2d323a;color:#95a2bb}}
