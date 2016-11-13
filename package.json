@@ -1,10 +1,10 @@
 {
-  "name": "earth-skeleton",
+  "name": "fire-p",
   "version": "0.0.1",
-  "description": "Baseline css for findborg.com and any other project",
+  "description": "Create the perfect paragraph based on font size",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ExoTypography-Elements/earth-typography.git"
+    "url": "git+https://github.com/ExoTypography-Elements/fire-p.git"
   },
   "keywords": [
     "vue",
